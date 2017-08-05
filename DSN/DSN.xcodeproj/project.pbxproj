@@ -7,8 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149777F71F3672BD001B6A2D /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */; };
+		149777F81F3672BD001B6A2D /* FONTLOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 149777F51F3672BD001B6A2D /* FONTLOG.txt */; };
+		149777F91F3672BD001B6A2D /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 149777F61F3672BD001B6A2D /* OFL.txt */; };
+		149777FB1F36765E001B6A2D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149777FA1F36765E001B6A2D /* SnapshotHelper.swift */; };
+		14F30E251F36673A0059B828 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E241F36673A0059B828 /* RootViewController.swift */; };
+		14F30E271F36674B0059B828 /* RootViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E261F36674B0059B828 /* RootViewController+UI.swift */; };
+		14F30E291F36676E0059B828 /* RootViewController+PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E281F36676E0059B828 /* RootViewController+PageView.swift */; };
+		14F30E2B1F3667930059B828 /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E2A1F3667930059B828 /* DishViewController.swift */; };
+		14F30E2D1F3667AF0059B828 /* DishViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E2C1F3667AF0059B828 /* DishViewController+CollectionView.swift */; };
+		14F30E2F1F3668120059B828 /* HeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E2E1F3668120059B828 /* HeaderReusableView.swift */; };
+		14F30E311F36682E0059B828 /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E301F36682E0059B828 /* OverviewCell.swift */; };
+		14F30E331F3668340059B828 /* TargetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E321F3668340059B828 /* TargetingCell.swift */; };
+		14F30E371F3668430059B828 /* SignalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E361F3668430059B828 /* SignalCell.swift */; };
+		14F30E391F3668730059B828 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E381F3668730059B828 /* DishView.swift */; };
+		14F30E3B1F36687B0059B828 /* ThinLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E3A1F36687B0059B828 /* ThinLineView.swift */; };
+		14F30E3D1F3668800059B828 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E3C1F3668800059B828 /* SquareView.swift */; };
+		14F30E3F1F3668A30059B828 /* DishPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E3E1F3668A30059B828 /* DishPageControl.swift */; };
+		14F30E411F3668CA0059B828 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E401F3668CA0059B828 /* Model.swift */; };
+		14F30E431F3668D10059B828 /* Model+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E421F3668D10059B828 /* Model+DataSource.swift */; };
+		14F30E491F3668E20059B828 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E481F3668E20059B828 /* DishData.swift */; };
+		14F30E4B1F3668E60059B828 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E4A1F3668E60059B828 /* Target.swift */; };
+		14F30E4D1F3668EB0059B828 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E4C1F3668EB0059B828 /* Signal.swift */; };
+		14F30E4F1F3668EF0059B828 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E4E1F3668EF0059B828 /* Site.swift */; };
+		14F30E511F3668F90059B828 /* Spacecraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E501F3668F90059B828 /* Spacecraft.swift */; };
+		14F30E531F3668FF0059B828 /* DSNSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E521F3668FF0059B828 /* DSNSession.swift */; };
+		14F30E551F3669060059B828 /* DSNSignalFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E541F3669060059B828 /* DSNSignalFetcher.swift */; };
+		14F30E571F3669140059B828 /* DSNConfigFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E561F3669140059B828 /* DSNConfigFetcher.swift */; };
+		14F30E591F366B200059B828 /* AntennaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E581F366B200059B828 /* AntennaCell.swift */; };
+		14F30E5C1F366B490059B828 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F30E5B1F366B490059B828 /* Dish.swift */; };
+		14F30E661F3671B80059B828 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14F30E651F3671B80059B828 /* Settings.bundle */; };
+		14F30E681F3671D70059B828 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F30E671F3671D70059B828 /* art.scnassets */; };
 		14F88B6A1F35C0430009EC63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F88B691F35C0430009EC63 /* AppDelegate.swift */; };
-		14F88B6C1F35C0430009EC63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F88B6B1F35C0430009EC63 /* ViewController.swift */; };
 		14F88B6F1F35C0430009EC63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F88B6D1F35C0430009EC63 /* Main.storyboard */; };
 		14F88B711F35C0430009EC63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F88B701F35C0430009EC63 /* Assets.xcassets */; };
 		14F88B741F35C0430009EC63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F88B721F35C0430009EC63 /* LaunchScreen.storyboard */; };
@@ -26,9 +56,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
+		149777F51F3672BD001B6A2D /* FONTLOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
+		149777F61F3672BD001B6A2D /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		149777FA1F36765E001B6A2D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		14F30E241F36673A0059B828 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		14F30E261F36674B0059B828 /* RootViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootViewController+UI.swift"; sourceTree = "<group>"; };
+		14F30E281F36676E0059B828 /* RootViewController+PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootViewController+PageView.swift"; sourceTree = "<group>"; };
+		14F30E2A1F3667930059B828 /* DishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
+		14F30E2C1F3667AF0059B828 /* DishViewController+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DishViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		14F30E2E1F3668120059B828 /* HeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderReusableView.swift; sourceTree = "<group>"; };
+		14F30E301F36682E0059B828 /* OverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
+		14F30E321F3668340059B828 /* TargetingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetingCell.swift; sourceTree = "<group>"; };
+		14F30E361F3668430059B828 /* SignalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalCell.swift; sourceTree = "<group>"; };
+		14F30E381F3668730059B828 /* DishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		14F30E3A1F36687B0059B828 /* ThinLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinLineView.swift; sourceTree = "<group>"; };
+		14F30E3C1F3668800059B828 /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		14F30E3E1F3668A30059B828 /* DishPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishPageControl.swift; sourceTree = "<group>"; };
+		14F30E401F3668CA0059B828 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		14F30E421F3668D10059B828 /* Model+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+DataSource.swift"; sourceTree = "<group>"; };
+		14F30E481F3668E20059B828 /* DishData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishData.swift; sourceTree = "<group>"; };
+		14F30E4A1F3668E60059B828 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		14F30E4C1F3668EB0059B828 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		14F30E4E1F3668EF0059B828 /* Site.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		14F30E501F3668F90059B828 /* Spacecraft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacecraft.swift; sourceTree = "<group>"; };
+		14F30E521F3668FF0059B828 /* DSNSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSNSession.swift; sourceTree = "<group>"; };
+		14F30E541F3669060059B828 /* DSNSignalFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSNSignalFetcher.swift; sourceTree = "<group>"; };
+		14F30E561F3669140059B828 /* DSNConfigFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSNConfigFetcher.swift; sourceTree = "<group>"; };
+		14F30E581F366B200059B828 /* AntennaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntennaCell.swift; sourceTree = "<group>"; };
+		14F30E5B1F366B490059B828 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		14F30E651F3671B80059B828 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		14F30E671F3671D70059B828 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		14F88B661F35C0430009EC63 /* DSN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F88B691F35C0430009EC63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14F88B6B1F35C0430009EC63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14F88B6E1F35C0430009EC63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14F88B701F35C0430009EC63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F88B731F35C0430009EC63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +116,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F30E5A1F366B2F0059B828 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E481F3668E20059B828 /* DishData.swift */,
+				14F30E5B1F366B490059B828 /* Dish.swift */,
+				14F30E4A1F3668E60059B828 /* Target.swift */,
+				14F30E4C1F3668EB0059B828 /* Signal.swift */,
+				14F30E4E1F3668EF0059B828 /* Site.swift */,
+				14F30E501F3668F90059B828 /* Spacecraft.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		14F30E5D1F366B910059B828 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E401F3668CA0059B828 /* Model.swift */,
+				14F30E421F3668D10059B828 /* Model+DataSource.swift */,
+				14F30E5E1F366B990059B828 /* Networking */,
+				14F30E5A1F366B2F0059B828 /* Objects */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		14F30E5E1F366B990059B828 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E521F3668FF0059B828 /* DSNSession.swift */,
+				14F30E541F3669060059B828 /* DSNSignalFetcher.swift */,
+				14F30E561F3669140059B828 /* DSNConfigFetcher.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		14F30E5F1F366BAE0059B828 /* Interface Elements */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E621F36719B0059B828 /* Cells */,
+				14F30E631F3671A40059B828 /* Views */,
+			);
+			name = "Interface Elements";
+			sourceTree = "<group>";
+		};
+		14F30E601F3671870059B828 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E241F36673A0059B828 /* RootViewController.swift */,
+				14F30E261F36674B0059B828 /* RootViewController+UI.swift */,
+				14F30E281F36676E0059B828 /* RootViewController+PageView.swift */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		14F30E611F3671900059B828 /* DishViewController */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E2A1F3667930059B828 /* DishViewController.swift */,
+				14F30E2C1F3667AF0059B828 /* DishViewController+CollectionView.swift */,
+			);
+			name = DishViewController;
+			sourceTree = "<group>";
+		};
+		14F30E621F36719B0059B828 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E2E1F3668120059B828 /* HeaderReusableView.swift */,
+				14F30E301F36682E0059B828 /* OverviewCell.swift */,
+				14F30E321F3668340059B828 /* TargetingCell.swift */,
+				14F30E361F3668430059B828 /* SignalCell.swift */,
+				14F30E581F366B200059B828 /* AntennaCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		14F30E631F3671A40059B828 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14F30E381F3668730059B828 /* DishView.swift */,
+				14F30E3A1F36687B0059B828 /* ThinLineView.swift */,
+				14F30E3E1F3668A30059B828 /* DishPageControl.swift */,
+				14F30E3C1F3668800059B828 /* SquareView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		14F30E641F3671AD0059B828 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14F88B6D1F35C0430009EC63 /* Main.storyboard */,
+				14F88B701F35C0430009EC63 /* Assets.xcassets */,
+				14F30E671F3671D70059B828 /* art.scnassets */,
+				14F30E651F3671B80059B828 /* Settings.bundle */,
+				14F88B721F35C0430009EC63 /* LaunchScreen.storyboard */,
+				14F88B751F35C0430009EC63 /* Info.plist */,
+				149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */,
+				149777F51F3672BD001B6A2D /* FONTLOG.txt */,
+				149777F61F3672BD001B6A2D /* OFL.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		14F88B5D1F35C0430009EC63 = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +239,11 @@
 			isa = PBXGroup;
 			children = (
 				14F88B691F35C0430009EC63 /* AppDelegate.swift */,
-				14F88B6B1F35C0430009EC63 /* ViewController.swift */,
-				14F88B6D1F35C0430009EC63 /* Main.storyboard */,
-				14F88B701F35C0430009EC63 /* Assets.xcassets */,
-				14F88B721F35C0430009EC63 /* LaunchScreen.storyboard */,
-				14F88B751F35C0430009EC63 /* Info.plist */,
+				14F30E601F3671870059B828 /* RootViewController */,
+				14F30E611F3671900059B828 /* DishViewController */,
+				14F30E5F1F366BAE0059B828 /* Interface Elements */,
+				14F30E5D1F366B910059B828 /* Model */,
+				14F30E641F3671AD0059B828 /* Resources */,
 			);
 			path = DSN;
 			sourceTree = "<group>";
@@ -90,6 +251,7 @@
 		14F88B801F35C0610009EC63 /* DSNScreenshots */ = {
 			isa = PBXGroup;
 			children = (
+				149777FA1F36765E001B6A2D /* SnapshotHelper.swift */,
 				14F88B811F35C0610009EC63 /* DSNScreenshots.swift */,
 				14F88B831F35C0610009EC63 /* Info.plist */,
 			);
@@ -181,8 +343,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F30E661F3671B80059B828 /* Settings.bundle in Resources */,
+				149777F81F3672BD001B6A2D /* FONTLOG.txt in Resources */,
 				14F88B741F35C0430009EC63 /* LaunchScreen.storyboard in Resources */,
+				149777F71F3672BD001B6A2D /* Dosis-SemiBold.ttf in Resources */,
+				14F30E681F3671D70059B828 /* art.scnassets in Resources */,
 				14F88B711F35C0430009EC63 /* Assets.xcassets in Resources */,
+				149777F91F3672BD001B6A2D /* OFL.txt in Resources */,
 				14F88B6F1F35C0430009EC63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,8 +368,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14F88B6C1F35C0430009EC63 /* ViewController.swift in Sources */,
+				14F30E2D1F3667AF0059B828 /* DishViewController+CollectionView.swift in Sources */,
+				14F30E3B1F36687B0059B828 /* ThinLineView.swift in Sources */,
+				14F30E431F3668D10059B828 /* Model+DataSource.swift in Sources */,
+				14F30E371F3668430059B828 /* SignalCell.swift in Sources */,
+				14F30E291F36676E0059B828 /* RootViewController+PageView.swift in Sources */,
+				14F30E531F3668FF0059B828 /* DSNSession.swift in Sources */,
+				14F30E511F3668F90059B828 /* Spacecraft.swift in Sources */,
+				14F30E591F366B200059B828 /* AntennaCell.swift in Sources */,
+				14F30E4D1F3668EB0059B828 /* Signal.swift in Sources */,
+				14F30E2F1F3668120059B828 /* HeaderReusableView.swift in Sources */,
+				14F30E4F1F3668EF0059B828 /* Site.swift in Sources */,
+				14F30E3F1F3668A30059B828 /* DishPageControl.swift in Sources */,
+				14F30E551F3669060059B828 /* DSNSignalFetcher.swift in Sources */,
+				14F30E3D1F3668800059B828 /* SquareView.swift in Sources */,
+				14F30E311F36682E0059B828 /* OverviewCell.swift in Sources */,
+				14F30E5C1F366B490059B828 /* Dish.swift in Sources */,
+				14F30E411F3668CA0059B828 /* Model.swift in Sources */,
+				14F30E391F3668730059B828 /* DishView.swift in Sources */,
+				14F30E2B1F3667930059B828 /* DishViewController.swift in Sources */,
 				14F88B6A1F35C0430009EC63 /* AppDelegate.swift in Sources */,
+				14F30E491F3668E20059B828 /* DishData.swift in Sources */,
+				14F30E4B1F3668E60059B828 /* Target.swift in Sources */,
+				14F30E271F36674B0059B828 /* RootViewController+UI.swift in Sources */,
+				14F30E571F3669140059B828 /* DSNConfigFetcher.swift in Sources */,
+				14F30E251F36673A0059B828 /* RootViewController.swift in Sources */,
+				14F30E331F3668340059B828 /* TargetingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F88B821F35C0610009EC63 /* DSNScreenshots.swift in Sources */,
+				149777FB1F36765E001B6A2D /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +536,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72S993BNAV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSN/DSN",
+				);
 				INFOPLIST_FILE = DSN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSN;
@@ -357,6 +553,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72S993BNAV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSN/DSN",
+				);
 				INFOPLIST_FILE = DSN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSN;
@@ -410,6 +610,7 @@
 				14F88B7A1F35C0430009EC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14F88B861F35C0610009EC63 /* Build configuration list for PBXNativeTarget "DSNScreenshots" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +619,7 @@
 				14F88B881F35C0610009EC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
