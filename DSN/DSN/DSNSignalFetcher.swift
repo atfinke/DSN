@@ -20,7 +20,8 @@ class DSNSignalFetcher: NSObject, XMLParserDelegate {
 
     private enum ParserKey: String {
         case config, sites, spacecraftMap
-        case dish, name, friendlyName, type, spacecraft, explorerName, uplegRange, downlegRange, rtlt
+        case name, azimuthAngle, elevationAngle, windSpeed
+        case dish, friendlyName, type, spacecraft, explorerName, uplegRange, downlegRange, rtlt
         case upSignal, downSignal, signalType, signalTypeDebug, dataRate, frequency, power, target
     }
 
@@ -54,11 +55,10 @@ class DSNSignalFetcher: NSObject, XMLParserDelegate {
     //swiftlint:disable:next line_length function_body_length
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         if elementName == ParserKey.dish.rawValue,
-            let name = attributeDict["name"],
-            let updatedString = attributeDict["updated"],
-            let azimuthAngle = attributeDict["azimuthAngle"],
-            let elevationAngle = attributeDict["elevationAngle"],
-            let windSpeed = attributeDict["windSpeed"] {
+            let name = attributeDict[ParserKey.name.rawValue],
+            let azimuthAngle = attributeDict[ParserKey.azimuthAngle.rawValue],
+            let elevationAngle = attributeDict[ParserKey.elevationAngle.rawValue],
+            let windSpeed = attributeDict[ParserKey.windSpeed.rawValue] {
 
             activeStatus = AntennaStatus(name: name,
                                          windSpeed: windSpeed,
