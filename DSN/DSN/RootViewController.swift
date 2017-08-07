@@ -105,14 +105,17 @@ class RootViewController: UIViewController {
     }
 
     @IBAction func refresh(_ sender: Any) {
-        let vc = model.dishViewController(at: pageControl.currentPage + 1)
-        pageViewController.setViewControllers([vc!], direction: .forward, animated: false, completion: nil)
-
-        pageControl.currentPage += 1
-        return
-        //toolbar.items?.insert(self.loadingBarButtonItem, at: 1)
-        // toolbar.items?.remove(at: 0)
-        // model.restartFetch()
+        if ProcessInfo.processInfo.arguments.contains("TARGET_SCREENSHOTS") {
+            let vc = model.dishViewController(at: pageControl.currentPage + 1)
+            pageViewController.setViewControllers([vc!], direction: .forward, animated: false, completion: nil)
+            pageControl.currentPage += 1
+            siteLabel.text = model.title(for: vc!.dish.site.displayName.uppercased())
+            animatingInSiteLabel.text = model.title(for: vc!.dish.site.displayName.uppercased())
+        } else {
+            toolbar.items?.insert(self.loadingBarButtonItem, at: 1)
+            toolbar.items?.remove(at: 0)
+            model.restartFetch()
+        }
     }
 
     // MARK: - Model Updates
@@ -148,10 +151,11 @@ class RootViewController: UIViewController {
 
             UIView.animate(withDuration: 1.0, animations: {
                 self.dishView.alpha = 0.0
-                self.siteLabel.alpha = 1.0
+                self.siteLabel.alpha = 0.25
                 self.animatingInSiteLabel.alpha = 1.0
             }) { _ in
                 UIView.animate(withDuration: 0.5, animations: {
+                    self.siteLabel.alpha = 1.0
                     self.toolbar.alpha = 1.0
                     self.thinLine.alpha = 1.0
                     self.pageViewController.view.alpha = 1.0
@@ -177,5 +181,5 @@ class RootViewController: UIViewController {
 
         present(alertController, animated: true, completion: nil)
     }
-    
+
 }

@@ -122,12 +122,12 @@ class DishView: UIView {
 
         dish.eulerAngles = SCNVector3(elevationAngle, 0, 0)
         group.eulerAngles = SCNVector3(0, azimuthAngle, 0)
-        
+
         SCNTransaction.completionBlock = {
             self.sceneView.scene?.isPaused = true
         }
-        
+
         SCNTransaction.commit()
     }
-    
+
 }

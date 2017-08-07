@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9h-Mj-Ork" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-569" y="-244"/>
+            <point key="canvasLocation" x="-782" y="-243"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="flz-6e-QtF">
@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="refresh" id="QIn-SM-P0l">
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.72159957885742188" green="0.72160172462463379" blue="0.72160667181015015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="refresh:" destination="HhC-R6-LDH" id="T1l-b3-Del"/>
                                         </connections>
@@ -59,7 +59,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" lineBreakMode="middleTruncation" id="GlP-2B-fmx">
                                             <rect key="frame" x="337" y="11" width="22" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.72159957885742188" green="0.72160172462463379" blue="0.72160667181015015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
                                                 <action selector="showInfo:" destination="HhC-R6-LDH" eventType="touchUpInside" id="b7d-v7-ZQb"/>
                                             </connections>
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBs-VT-CD0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-244"/>
+            <point key="canvasLocation" x="574" y="-243"/>
         </scene>
     </scenes>
 </document>

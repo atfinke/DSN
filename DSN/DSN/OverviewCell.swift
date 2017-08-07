@@ -77,5 +77,5 @@ class OverviewCell: UICollectionViewCell {
         titleLabel.text = title
         offlineLabel.isHidden = !isOffline
     }
-    
+
 }

@@ -26,5 +26,5 @@ class ThinLineView: UIView {
         NSLayoutConstraint.activate(constraints)
         return thinLine
     }
-    
+
 }

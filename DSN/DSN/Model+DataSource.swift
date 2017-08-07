@@ -57,6 +57,5 @@ extension Model: UIPageViewControllerDataSource {
         viewController.dish = dishes[index]
         return viewController
     }
-    
-}
 
+}

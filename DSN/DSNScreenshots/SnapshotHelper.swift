@@ -86,7 +86,9 @@ open class Snapshot: NSObject {
         do {
             let launchArguments = try String(contentsOf: path, encoding: String.Encoding.utf8)
             let regex = try NSRegularExpression(pattern: "(\\\".+?\\\"|\\S+)", options: [])
-            let matches = regex.matches(in: launchArguments, options: [], range: NSRange(location:0, length:launchArguments.characters.count))
+            let matches = regex.matches(in: launchArguments,
+                                        options: [],
+                                        range: NSRange(location:0, length:launchArguments.characters.count))
             let results = matches.map { result -> String in
                 (launchArguments as NSString).substring(with: result.range)
             }
@@ -101,7 +103,7 @@ open class Snapshot: NSObject {
             waitForLoadingIndicatorToDisappear()
         }
 
-        print("snapshot: \(name)") // more information about this, check out https://github.com/fastlane/fastlane/tree/master/snapshot#how-does-it-work
+        print("snapshot: \(name)")
 
         sleep(1) // Waiting for the animation to be finished (kind of)
 
@@ -119,7 +121,11 @@ open class Snapshot: NSObject {
             return
         #endif
 
-        let query = XCUIApplication().statusBars.children(matching: .other).element(boundBy: 1).children(matching: .other)
+        let query = XCUIApplication()
+            .statusBars
+            .children(matching: .other)
+            .element(boundBy: 1)
+            .children(matching: .other)
 
         while (0..<query.count).map({ query.element(boundBy: $0) }).contains(where: { $0.isLoadingIndicator }) {
             sleep(1)
@@ -149,6 +155,7 @@ open class Snapshot: NSObject {
                 return nil
             }
             guard let homeDirUrl = URL(string: simulatorHostHome) else {
+                // swiftlint:disable:next line_length
                 print("Can't prepare environment. Simulator home location is inaccessible. Does \(simulatorHostHome) exist?")
                 return nil
             }

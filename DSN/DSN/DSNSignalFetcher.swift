@@ -101,8 +101,12 @@ class DSNSignalFetcher: NSObject, XMLParserDelegate {
             }
 
             let targetSpacecraft = spacecraft.filter({ $0.name.lowercased() == spacecraftName.lowercased() }).first
+            let target = Target(name: spacecraftName,
+                                range: range,
+                                rtlt: rtlt,
+                                spacecraft: targetSpacecraft)
 
-            activeStatus?.targets.append(Target(name: spacecraftName, range: range, rtlt: rtlt, spacecraft: targetSpacecraft))
+            activeStatus?.targets.append(target)
         }
     }
 
@@ -118,7 +122,7 @@ class DSNSignalFetcher: NSObject, XMLParserDelegate {
         self.completion?(allAntennaStatuses)
         allAntennaStatuses = []
     }
-    
+
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         self.completion?(nil)
     }

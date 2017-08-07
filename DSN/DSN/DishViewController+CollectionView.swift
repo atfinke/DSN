@@ -28,7 +28,7 @@ extension DishViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
 
     // MARK: - UICollectionViewDataSource
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
     }
@@ -36,7 +36,6 @@ extension DishViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section].items
     }
-
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let section = sections[indexPath.section]
@@ -88,5 +87,5 @@ extension DishViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             return cell
         }
     }
-    
+
 }

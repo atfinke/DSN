@@ -68,5 +68,5 @@ extension RootViewController: UIScrollViewDelegate, UIPageViewControllerDelegate
         siteLabel.text = model.title(for: newSite)
         animatingInSiteLabel.text = model.title(for: newSite)
     }
-    
+
 }

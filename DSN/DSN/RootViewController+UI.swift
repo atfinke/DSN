@@ -233,5 +233,5 @@ extension RootViewController {
             self.createGradients()
         }, completion: nil)
     }
-    
+
 }

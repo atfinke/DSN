@@ -50,7 +50,7 @@ class DSNConfigFetcher: NSObject, XMLParserDelegate {
             let name = attributeDict[ParserKey.name.rawValue],
             let displayName = attributeDict[ParserKey.friendlyName.rawValue] {
             let spacecraft = Spacecraft(name: name, displayName: displayName, range: nil, lightTime: nil)
-            
+
             allSpacecraft.append(spacecraft)
         } else if elementName == ParserKey.site.rawValue,
             let name = attributeDict[ParserKey.name.rawValue],

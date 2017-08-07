@@ -109,5 +109,5 @@ class Model: NSObject {
             return "🏳 " + siteName
         }
     }
-    
+
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1483469B1F36F11900AFF585 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148346991F36F11900AFF585 /* Fabric.framework */; };
+		1483469C1F36F11900AFF585 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1483469A1F36F11900AFF585 /* Crashlytics.framework */; };
 		149777F71F3672BD001B6A2D /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */; };
 		149777F81F3672BD001B6A2D /* FONTLOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 149777F51F3672BD001B6A2D /* FONTLOG.txt */; };
 		149777F91F3672BD001B6A2D /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 149777F61F3672BD001B6A2D /* OFL.txt */; };
@@ -56,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1405C8311F37EB950066B232 /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deliverfile; sourceTree = SOURCE_ROOT; };
+		1405C8321F37EB950066B232 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = SOURCE_ROOT; };
+		1405C8331F37EB950066B232 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = SOURCE_ROOT; };
+		148346991F36F11900AFF585 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		1483469A1F36F11900AFF585 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
 		149777F51F3672BD001B6A2D /* FONTLOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
 		149777F61F3672BD001B6A2D /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -103,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1483469C1F36F11900AFF585 /* Crashlytics.framework in Frameworks */,
+				1483469B1F36F11900AFF585 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +222,8 @@
 				149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */,
 				149777F51F3672BD001B6A2D /* FONTLOG.txt */,
 				149777F61F3672BD001B6A2D /* OFL.txt */,
+				148346991F36F11900AFF585 /* Fabric.framework */,
+				1483469A1F36F11900AFF585 /* Crashlytics.framework */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -251,6 +262,9 @@
 		14F88B801F35C0610009EC63 /* DSNScreenshots */ = {
 			isa = PBXGroup;
 			children = (
+				1405C8311F37EB950066B232 /* Deliverfile */,
+				1405C8321F37EB950066B232 /* Fastfile */,
+				1405C8331F37EB950066B232 /* Snapfile */,
 				149777FA1F36765E001B6A2D /* SnapshotHelper.swift */,
 				14F88B811F35C0610009EC63 /* DSNScreenshots.swift */,
 				14F88B831F35C0610009EC63 /* Info.plist */,
@@ -265,9 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14F88B781F35C0430009EC63 /* Build configuration list for PBXNativeTarget "DSN" */;
 			buildPhases = (
+				14550E6C1F37B58000872B7B /* Build Number */,
 				14F88B621F35C0430009EC63 /* Sources */,
 				14F88B631F35C0430009EC63 /* Frameworks */,
 				14F88B641F35C0430009EC63 /* Resources */,
+				14D4104C1F37CBDD008FC59A /* Swiftlint */,
+				148346981F36F10D00AFF585 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -362,6 +379,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14550E6C1F37B58000872B7B /* Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		148346981F36F10D00AFF585 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 80c3b2d37f1bca4e182e7fbf7976e6f069340b4d d0bc3219cfdb92e9f323b3c5f0de3ef22835401f8cda5fc54391593a8c285431";
+		};
+		14D4104C1F37CBDD008FC59A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14F88B621F35C0430009EC63 /* Sources */ = {
@@ -535,15 +597,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 72S993BNAV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/DSN/DSN",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DSN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -552,15 +619,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 72S993BNAV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/DSN/DSN",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DSN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -571,6 +642,7 @@
 				DEVELOPMENT_TEAM = 72S993BNAV;
 				INFOPLIST_FILE = DSNScreenshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DTARGET_SCREENSHOTS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSNScreenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -584,6 +656,7 @@
 				DEVELOPMENT_TEAM = 72S993BNAV;
 				INFOPLIST_FILE = DSNScreenshots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DTARGET_SCREENSHOTS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewfinke.DSNScreenshots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

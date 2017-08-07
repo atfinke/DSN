@@ -26,5 +26,5 @@ struct Signal {
     let power: String
 
     let spacecraftName: String
-    
+
 }

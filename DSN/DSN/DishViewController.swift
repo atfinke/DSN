@@ -67,19 +67,19 @@ class DishViewController: UIViewController {
         didSet {
             collectionView.delegate = self
             collectionView.dataSource = self
-            
+
             collectionView.register(SignalCell.self, forCellWithReuseIdentifier: SignalCell.reuseIdentifier)
             collectionView.register(AntennaCell.self, forCellWithReuseIdentifier: AntennaCell.reuseIdentifier)
             collectionView.register(OverviewCell.self, forCellWithReuseIdentifier: OverviewCell.reuseIdentifier)
             collectionView.register(TargetingCell.self, forCellWithReuseIdentifier: TargetingCell.reuseIdentifier)
-            collectionView.register(HeaderReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+            collectionView.register(HeaderReusableView.self,
+                                    forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
                                     withReuseIdentifier: HeaderReusableView.reuseIdentifier)
 
         }
     }
 
     // MARK: View Life Cycle
-
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -153,5 +153,5 @@ class DishViewController: UIViewController {
             updatedSections.append(.downlinks(downSignals))
         }
     }
-    
+
 }

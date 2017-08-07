@@ -141,5 +141,5 @@ class TargetingCell: UICollectionViewCell {
         }
         NSLayoutConstraint.activate(constraints)
     }
-    
+
 }
