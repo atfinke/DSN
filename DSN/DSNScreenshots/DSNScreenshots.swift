@@ -49,19 +49,21 @@ class DSNScreenshots: XCTestCase {
 
         let refreshButton = XCUIApplication().toolbars.buttons["Refresh"]
         wait(for: refreshButton, time : 15)
+        sleep(2)
 
-        for _ in 0...8 {
+        for _ in 0...3 {
             refreshButton.tap()
         }
+     sleep(1)
 
-        snapshot("a_MainDish")
+        snapshot("_a_aMainDish")
 
         for _ in 0...5 {
             app.collectionViews.allElementsBoundByIndex[0].swipeUp()
             sleep(1)
         }
 
-        snapshot("b_MainDish")
+        snapshot("_a_bMainDish")
     }
 
     func wait(for element: XCUIElement, time: Double = 5) {
