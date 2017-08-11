@@ -66,6 +66,7 @@
                                         </button>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" red="0.72159957885742188" green="0.72160172462463379" blue="0.72160667181015015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
