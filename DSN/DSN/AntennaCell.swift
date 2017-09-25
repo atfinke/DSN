@@ -28,9 +28,9 @@ class AntennaCell: UICollectionViewCell {
             }
 
             dishView.detail = status.name
-            azimuthView.detail = status.azimuthAngle + " deg"
+            azimuthView.detail = status.azimuthAngle + " DEG"
 
-            elevationView.detail = status.elevationAngle + " deg"
+            elevationView.detail = status.elevationAngle + " DEG"
             windView.detail = status.windSpeed + " km/hr"
         }
     }

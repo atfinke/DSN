@@ -35,10 +35,10 @@ class SignalCell: UICollectionViewCell {
 
     var signal: Signal? {
         didSet {
-            sourceView.detail = signal?.spacecraftName
-            typeView.detail = signal?.type.rawValue
-            frequencyView.detail = frequencyString(for: signal?.frequency)
-            powerView.detail = powerString(for: signal?.power)
+            sourceView.detail = signal?.spacecraftName.uppercased()
+            typeView.detail = signal?.type.rawValue.uppercased()
+            frequencyView.detail = frequencyString(for: signal?.frequency).uppercased()
+            powerView.detail = powerString(for: signal?.power).uppercased()
 
             guard let signal = signal else { return }
 

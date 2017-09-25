@@ -11,7 +11,7 @@ class DSNSession {
     static let shared: URLSession = {
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
-        config.timeoutIntervalForRequest = 5
+        config.timeoutIntervalForRequest = 25
         config.urlCache = nil
         return URLSession(configuration: config)
     }()

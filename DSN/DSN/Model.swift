@@ -6,9 +6,8 @@
 //  Copyright © 2017 Andrew Finke. All rights reserved.
 //
 
-import Foundation
 import UIKit
-//import Crashlytics
+import Crashlytics
 
 class Model: NSObject {
 
@@ -34,6 +33,8 @@ class Model: NSObject {
     // MARK: - Data Fetching
 
     func restartFetch() {
+        Answers.logCustomEvent(withName: "Restart Fetch Cycle", customAttributes: nil)
+
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         failedLastUpdate = false
 
@@ -41,7 +42,7 @@ class Model: NSObject {
         fetchSignals()
 
         fetchTimer?.invalidate()
-        fetchTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
+        fetchTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { timer in
             if self.failedLastUpdate {
                 timer.invalidate()
             } else {
@@ -67,8 +68,9 @@ class Model: NSObject {
                 self.spacecraft = spacecraft
             } else {
                 self.updateFailed()
+                Answers.logCustomEvent(withName: "Config Fetch Failed", customAttributes: nil)
             }
-            //Answers.logCustomEvent(withName: "Config Fetch", customAttributes: nil)
+            Answers.logCustomEvent(withName: "Config Fetch", customAttributes: nil)
         }
     }
 
@@ -82,10 +84,11 @@ class Model: NSObject {
                 }
             } else {
                 self.updateFailed()
+                Answers.logCustomEvent(withName: "Signal Fetch Failed", customAttributes: nil)
             }
 
             self.loadedDishes?()
-            //Answers.logCustomEvent(withName: "Signals Fetch", customAttributes: nil)
+            Answers.logCustomEvent(withName: "Signals Fetch", customAttributes: nil)
         }
     }
 

@@ -31,19 +31,19 @@ class TargetingCell: UICollectionViewCell {
                 [rangeView, timeView].forEach({
                     $0.detail = nil
                 })
-                targetingView.detail = self.target?.name
+                targetingView.detail = self.target?.name.uppercased()
                 return
             }
 
             targetingView.detail = spacecraft.displayName.uppercased()
             if let range = target.range, let string = distanceString(for: range) {
-                rangeView.detail = string
+                rangeView.detail = string.uppercased()
             } else {
                 rangeView.detail = nil
             }
 
             if let lightTime = target.rtlt, let string = lightTimeString(for: lightTime) {
-                timeView.detail = string
+                timeView.detail = string.uppercased()
             } else {
                 timeView.detail = nil
             }

@@ -35,7 +35,7 @@ class SquareView: UIView {
             return detailLabel.text
         }
         set {
-            if let text = newValue?.uppercased(), !text.isEmpty {
+            if let text = newValue, !text.isEmpty {
                 detailLabel.text = text
             } else {
                 detailLabel.text = "-"
