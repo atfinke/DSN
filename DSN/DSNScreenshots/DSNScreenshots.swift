@@ -18,7 +18,7 @@ class DSNScreenshots: XCTestCase {
             //swiftlint:disable:next force_cast line_length
             let original = class_getInstanceMethod(objc_getClass("XCUIApplicationProcess") as! AnyClass, Selector(("waitForQuiescenceIncludingAnimationsIdle:")))
             let replaced = class_getInstanceMethod(type(of: self), #selector(DSNScreenshots.replace))
-            method_exchangeImplementations(original, replaced)
+            method_exchangeImplementations(original!, replaced!)
             DSNScreenshots.replacedIdleTimer = true
         }
 
@@ -42,9 +42,9 @@ class DSNScreenshots: XCTestCase {
 
     func testScreenshot() {
         if UI_USER_INTERFACE_IDIOM() == .pad {
-            XCUIDevice.shared().orientation = .landscapeLeft
+            XCUIDevice.shared.orientation = .landscapeLeft
         } else {
-            XCUIDevice.shared().orientation = .portrait
+            XCUIDevice.shared.orientation = .portrait
         }
 
         let refreshButton = XCUIApplication().toolbars.buttons["Refresh"]

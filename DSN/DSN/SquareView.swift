@@ -52,7 +52,7 @@ class SquareView: UIView {
         titleLabel.textAlignment = .left
         titleLabel.textColor = UIColor.lightText
         titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 14.0, weight: UIFontWeightRegular)
+        titleLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 14.0, weight: UIFont.Weight.regular)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         detail = "-"
