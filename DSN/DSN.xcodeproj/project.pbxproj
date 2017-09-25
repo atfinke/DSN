@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143A45F71F787E4700C1E1D0 /* fabric.apikey in Resources */ = {isa = PBXBuildFile; fileRef = 143A45F61F787E3A00C1E1D0 /* fabric.apikey */; };
 		1483469B1F36F11900AFF585 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148346991F36F11900AFF585 /* Fabric.framework */; };
 		1483469C1F36F11900AFF585 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1483469A1F36F11900AFF585 /* Crashlytics.framework */; };
 		149777F71F3672BD001B6A2D /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */; };
@@ -61,6 +62,8 @@
 		1405C8311F37EB950066B232 /* Deliverfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Deliverfile; sourceTree = SOURCE_ROOT; };
 		1405C8321F37EB950066B232 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = SOURCE_ROOT; };
 		1405C8331F37EB950066B232 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = SOURCE_ROOT; };
+		143A45F51F787E3A00C1E1D0 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; path = fabric.buildsecret; sourceTree = "<group>"; };
+		143A45F61F787E3A00C1E1D0 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; path = fabric.apikey; sourceTree = "<group>"; };
 		148346991F36F11900AFF585 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		1483469A1F36F11900AFF585 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				149777F41F3672BD001B6A2D /* Dosis-SemiBold.ttf */,
 				149777F51F3672BD001B6A2D /* FONTLOG.txt */,
 				149777F61F3672BD001B6A2D /* OFL.txt */,
+				143A45F61F787E3A00C1E1D0 /* fabric.apikey */,
+				143A45F51F787E3A00C1E1D0 /* fabric.buildsecret */,
 				148346991F36F11900AFF585 /* Fabric.framework */,
 				1483469A1F36F11900AFF585 /* Crashlytics.framework */,
 			);
@@ -363,6 +368,7 @@
 				14F30E661F3671B80059B828 /* Settings.bundle in Resources */,
 				149777F81F3672BD001B6A2D /* FONTLOG.txt in Resources */,
 				14F88B741F35C0430009EC63 /* LaunchScreen.storyboard in Resources */,
+				143A45F71F787E4700C1E1D0 /* fabric.apikey in Resources */,
 				149777F71F3672BD001B6A2D /* Dosis-SemiBold.ttf in Resources */,
 				14F30E681F3671D70059B828 /* art.scnassets in Resources */,
 				14F88B711F35C0430009EC63 /* Assets.xcassets in Resources */,
@@ -407,7 +413,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 80c3b2d37f1bca4e182e7fbf7976e6f069340b4d d0bc3219cfdb92e9f323b3c5f0de3ef22835401f8cda5fc54391593a8c285431";
+			shellScript = "FABRIC_APIKEY_FILE=\"${SRCROOT}/DSN/fabric.apikey\"\nFABRIC_BUILDSECRET_FILE=\"${SRCROOT}/DSN/fabric.buildsecret\"\n\nif test ! -f \"$FABRIC_APIKEY_FILE\" -o ! -f \"$FABRIC_BUILDSECRET_FILE\"; then\necho \"This build wants to upload dSYM files to Crashlytics.\"\necho \"Uploading is possible only if a Fabric API key and a Fabric build secret are\"\necho \"available. This build is failing because at least one of these pieces of\"\necho \"information is missing.\"\necho \"\"\necho \"To fix the problem, create the following files and store the API key and\"\necho \"build secret, respectively, within those files:\"\necho \"\"\necho \"  $FABRIC_APIKEY_FILE\"\necho \"  $FABRIC_BUILDSECRET_FILE\"\necho \"\"\necho \"If you forked the project then you must register with Crashlytics and\"\necho \"get your own API key and build secret.\"\n\n# Let the build fail\nexit 1\nfi\n\nFABRIC_APIKEY=$(cat \"$FABRIC_APIKEY_FILE\")\nif test $? -ne 0; then\necho \"Cannot read $FABRIC_APIKEY_FILE\"\nexit 1\nfi\n\nFABRIC_BUILDSECRET=$(cat \"$FABRIC_BUILDSECRET_FILE\")\nif test $? -ne 0; then\necho \"Cannot read $FABRIC_BUILDSECRET_FILE\"\nexit 1\nfi\n\necho \"Uploading dSYM files to Crashlytics\"\n\"./Fabric.framework/run\" \"$FABRIC_APIKEY\" \"$FABRIC_BUILDSECRET\"";
 		};
 		14D4104C1F37CBDD008FC59A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;

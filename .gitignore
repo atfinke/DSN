@@ -66,3 +66,6 @@ DSN/Preview.html
 DSN/screenshots
 DSN/metadata
 DSN/test_output
+
+DSN/DSN/fabric.apikey
+DSN/DSN/fabric.buildsecret
