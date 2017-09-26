@@ -167,8 +167,8 @@ class RootViewController: UIViewController {
     }
 
     func presetConnectionAlert() {
-        let title = "DSN Connection Failure"
-        let message = "Unable to connect to the Deep Space Network."
+        let title = "DSN Network Down"
+        let message = "NASA's Deep Space Network is currently offline."
 
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
