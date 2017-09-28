@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slj-Gw-kJy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slj-Gw-kJy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,6 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="slj-Gw-kJy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0k5-qy-Fk6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,10 +30,6 @@
         <scene sceneID="flz-6e-QtF">
             <objects>
                 <viewController id="HhC-R6-LDH" customClass="RootViewController" customModule="DSN" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ajz-rY-8Gk"/>
-                        <viewControllerLayoutGuide type="bottom" id="vTY-RN-Fyp"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HXj-Ml-CRc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +46,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Slb-8Y-UcC"/>
                                     <barButtonItem style="plain" id="R4K-Cn-O9H">
                                         <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="15" id="p9b-AG-c8b" customClass="DishPageControl" customModule="DSN" customModuleProvider="target">
-                                            <rect key="frame" x="187" y="3.5" width="0.0" height="37"/>
+                                            <rect key="frame" x="187.5" y="3.5" width="0.0" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </pageControl>
                                     </barButtonItem>
@@ -73,8 +69,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="UDY-7F-RAB" secondAttribute="trailing" constant="-16" id="61H-eW-ksA"/>
                             <constraint firstItem="UDY-7F-RAB" firstAttribute="leading" secondItem="HXj-Ml-CRc" secondAttribute="leadingMargin" constant="-16" id="CUD-cw-f5w"/>
-                            <constraint firstItem="vTY-RN-Fyp" firstAttribute="top" secondItem="UDY-7F-RAB" secondAttribute="bottom" id="NKF-Qe-rME"/>
+                            <constraint firstItem="UDY-7F-RAB" firstAttribute="top" secondItem="Kza-fr-SjK" secondAttribute="bottom" constant="-44" id="qpK-DV-ugw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kza-fr-SjK"/>
                     </view>
                     <navigationItem key="navigationItem" id="B9L-Jw-0ZJ"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -91,16 +88,12 @@
         <scene sceneID="Aso-YM-CBV">
             <objects>
                 <viewController storyboardIdentifier="DishViewController" id="Qr2-5c-GtS" customClass="DishViewController" customModule="DSN" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="efB-Mz-lrh"/>
-                        <viewControllerLayoutGuide type="bottom" id="uZD-C2-Gto"/>
-                    </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JNA-lj-1gP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q1b-bL-EfK">
-                                <rect key="frame" x="0.0" y="8" width="375" height="615"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vDu-Nt-CvC">
                                     <size key="itemSize" width="50" height="50"/>
@@ -113,11 +106,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q1b-bL-EfK" firstAttribute="leading" secondItem="JNA-lj-1gP" secondAttribute="leading" id="667-fs-vHQ"/>
-                            <constraint firstItem="q1b-bL-EfK" firstAttribute="top" secondItem="efB-Mz-lrh" secondAttribute="bottom" constant="8" symbolic="YES" id="84R-VE-o1u"/>
-                            <constraint firstItem="uZD-C2-Gto" firstAttribute="top" secondItem="q1b-bL-EfK" secondAttribute="bottom" constant="44" id="DDH-2J-87r"/>
+                            <constraint firstItem="q1b-bL-EfK" firstAttribute="leading" secondItem="RIl-2V-rGY" secondAttribute="leading" id="667-fs-vHQ"/>
+                            <constraint firstItem="q1b-bL-EfK" firstAttribute="top" secondItem="RIl-2V-rGY" secondAttribute="top" constant="8" symbolic="YES" id="84R-VE-o1u"/>
+                            <constraint firstItem="RIl-2V-rGY" firstAttribute="bottom" secondItem="q1b-bL-EfK" secondAttribute="bottom" constant="44" id="DDH-2J-87r"/>
                             <constraint firstItem="q1b-bL-EfK" firstAttribute="width" secondItem="JNA-lj-1gP" secondAttribute="width" id="liq-pQ-rpu"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="RIl-2V-rGY"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
